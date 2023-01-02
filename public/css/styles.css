@@ -1,0 +1,76 @@
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* textos */
+p {
+    font-size: 12px;
+}
+
+/* titulares */
+h1 {
+    font-size: 24px;
+}
+
+/* precios */
+h2,
+h3,
+h4 {
+    font-size: 16px;
+}
+
+/* globals */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+.header {
+    background-color: var(--Amarillo);
+    padding: 40px 0 40px 0;
+}
+
+.in-quotes {
+    text-align: center;
+}
+
+.bars-menu {
+    padding: 8px;
+    background-color: var(--Celeste);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 6%;
+    height: 6%;
+    margin: 0 auto;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+}
+
+.ft-icons {
+    color: var(--Celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
