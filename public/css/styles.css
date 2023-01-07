@@ -1,39 +1,41 @@
 :root {
-    --Amarillo: #EAC926;
-    --Azul: #03264C;
-    --Celeste: #1259c3;
-    --Gris-oscuro: #666;
-    --Gris-claro: #ebebeb;
-    --Verde: #39b54a;
+    /* colores */
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    /* fuentes */
+    --primary-font: 'Roboto', sans-serif;
+    /* tamaños de fuente */
+    --h2-f-size: 2.4rem;
+    --h3-f-size: 1.8rem;
+    --h4-f-size: 1.6rem;
+    --a-f-size: 1.6rem;
+    --p-f-size: 1.2rem;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    /* border-box */
+    box-sizing: border-box;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-family: var(--primary-font);
 }
 
-/* textos */
-p {
-    font-size: 12px;
-}
+/* globales */
 
-/* titulares */
-h1 {
-    font-size: 24px;
-}
-
-/* precios */
-h2,
-h3,
-h4 {
-    font-size: 16px;
-}
-
-/* globals */
 ul {
     list-style: none;
 }
@@ -42,35 +44,91 @@ a {
     text-decoration: none;
 }
 
-/* header */
-.header {
-    background-color: var(--Amarillo);
-    padding: 40px 0 40px 0;
+img {
+    width: 100%;
 }
 
-.in-quotes {
-    text-align: center;
+/* titulares */
+
+h2 {
+    font-size: var(--h2-f-size);
 }
+
+/* precios */
+
+h3 {
+    font-size: var(--h3-f-size);
+}
+
+/* descuentos */
+
+h4 {
+    font-size: var(--h4-f-size);
+}
+
+/* cuerpos de texto */
+
+p {
+    font-size: var(--p-f-size);
+}
+
+a {
+    text-decoration: var(--a-f-size);
+}
+
+/* header */
+
+.header {
+    background-color: var(--amarillo);
+}
+
+.header-content {
+    padding: 1rem 0;
+}
+/* header-content -> more-info */
+
+.more-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* header-content -> more-info */
+
+.navigations {
+    margin-top: 2rem;
+}
+
+.navigations a {
+    color:black;
+}
+
+/* header-content -> navigations -> user-nav */
+
+.user-nav {
+    margin-top: inherit;
+}
+
+/* header-content -> bars-menu*/
 
 .bars-menu {
-    padding: 8px;
-    background-color: var(--Celeste);
-    color: white;
-    border-radius: 5px;
     text-align: center;
-    width: 6%;
-    height: 6%;
-    margin: 0 auto;
+    background-color: var(--celeste);
+    color: var(--gris-claro);
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 4rem;
+    border-radius: .3rem;
+    font-size: 2rem;
 }
 
 /* footer */
+
 .footer {
     text-align: center;
 }
 
-.ft-icons {
-    color: var(--Celeste);
+.footer i {
     font-size: 2em;
-    margin-bottom: 10px;
+    color: var(--celeste);
+    margin-bottom: 1rem;
 }
-

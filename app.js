@@ -2,19 +2,18 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-let indexPath = path.resolve(__dirname, './views/index.html');
-let staticPath = path.resolve(__dirname, './public');
+let publicFolder = path.resolve(__dirname, './public');
 
-app.use(express.static(staticPath));
+app.use(express.static(publicFolder));
 
-app.listen(3000, () => {
-    console.log('Server running...');
+app.listen(5500, () => {
+    console.log('Initializing server');
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(indexPath);
+    res.sendFile(path.resolve(__dirname, './views/index.html'));
 })
 
 app.get('/home', (req, res) => {
-    res.sendFile(indexPath);
+    res.sendFile(path.resolve(__dirname, './views/index.html'));
 })
