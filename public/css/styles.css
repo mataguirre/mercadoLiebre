@@ -11,9 +11,7 @@
     /* tamaños de fuente */
     --h2-f-size: 24px;
     --h3-f-size: 18px;
-    --h4-f-size: 16px;
-    --a-f-size: 16px;
-    --p-f-size: 12px;
+    --a-f-size: 14px;
 }
 
 html {
@@ -54,22 +52,8 @@ h2 {
     font-size: var(--h2-f-size);
 }
 
-/* precios */
-
 h3 {
     font-size: var(--h3-f-size);
-}
-
-/* descuentos */
-
-h4 {
-    font-size: var(--h4-f-size);
-}
-
-/* cuerpos de texto */
-
-p {
-    font-size: var(--p-f-size);
 }
 
 a {
@@ -167,71 +151,61 @@ a {
 .offers-description {
     padding: 15px;
     display: flex;
+    text-align: center;
     align-items: center;
     gap: 10px;
+    position: relative;
 }
 
 .last-visit-input,
 .offers-input {
     margin-bottom: 10px;
     background-color: white;
+    border-radius: 10px;
+}
+
+.offers-image,
+.last-visit-image {
+    padding: 10px;
+}
+
+.shipping-icon {
+    position: absolute;
+    top: -32px;
+    right: 20px;
+}
+
+.free-shipping-icon {
+    border-radius: 100%;
+    font-size: 12px;
+    border: 1px solid var(--verde);
+    padding: 10px 8px;
+    color: var(--verde);
 }
 
 .last-visit-price {
     width: 30%;
+    font-size: 20px;
 }
 
 .last-visit-discount {
     width: 70%;
+    font-size: 16px;
 }
 
 .offers-price {
     width: 30%;
+    font-size: 20px;
 }
 
 .offers-discount {
     width: 70%;
-}
-
-.shipping-icon {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 20px;
-    margin-top: -20px;
-}
-
-.free-shipping-icon {
-    display: block;
     font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: relative;
 }
-
-.free-shipping-icon:before {
-    position: absolute;
-    top: 51px;
-    left: 4px;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-}
-
 
 .last-visit-discount,
 .offers-discount {
     color: var(--verde);
-}
-
-.free-shipping-icon {
-    color: var(--verde);
-    padding-top: 15px;
-    padding-left: 15px;
 }
 
 .offers-title,
@@ -277,7 +251,7 @@ a {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 20px;
     }
-    
+
     .offers-content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
