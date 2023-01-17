@@ -190,6 +190,46 @@
         </div>
     </main>
 
+    <section class="contact">
+        <form class="form" action="" method="POST">
+            <div>
+                <label>Nombre del producto: </label>
+                <input type="text" name="nombre">
+            </div>
+            <div>
+                <label>Precio: </label>
+                <input type="text" name="precio">
+            </div>
+            <div>
+                <label>Categoría: </label>
+                <select name="categoria">
+                    <option value="hogar">Hogar</option>
+                    <option value="electro">Electro</option>
+                    <option value="indumentaria">Indumentaria</option>
+                </select>
+            </div>
+            <div>
+                <label>Ciudad: </label>
+                <select name="ciudad">
+                    <option value="buenos">Buenos Aires</option>
+                    <option value="rosario">Rosario</option>
+                    <option value="mendoza">Mendoza</option>
+                </select>
+            </div>
+            <div>
+                <label>Descripcion: </label>
+                <textarea name="descripcion"></textarea>
+            </div>
+            <div>
+                <label>Está en oferta: </label>
+                <input type="radio" name="enOferta">
+            </div>
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+
     <footer class="footer">
         <section class="pay">
             <i class="fa-solid fa-credit-card"></i>
