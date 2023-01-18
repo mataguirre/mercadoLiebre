@@ -66,6 +66,10 @@ img {
 
 .header {
     background-color: var(--amarillo);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
 .header-content {
@@ -170,11 +174,18 @@ img {
 
 .main {
     padding-bottom: 50px;
+    margin-top: 240px;
 }
 
 .main-content {
     width: 90%;
     margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+    .main {
+        margin: 0;
+    }
 }
 
 .last-visit-input img,
@@ -210,12 +221,28 @@ img {
     right: 20px;
 }
 
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
 .free-shipping-icon {
     border-radius: 100%;
-    font-size: 12px;
+    font-size: 15px;
     border: 1px solid var(--verde);
     padding: 10px 8px;
     color: var(--verde);
+}
+
+.free-shipping-icon:hover {
+    animation-name: girar;
+    animation-duration: 1000ms;
+    animation-direction: alternate;
 }
 
 .last-visit-price {
@@ -253,10 +280,10 @@ img {
 
 .banner {
     display: none;
+    margin-top: 145px;
 }
 
 @media(min-width: 768px) {
-
     .offers-title,
     .last-visit-title {
         text-align: justify;
@@ -373,6 +400,11 @@ img {
     border: none;
     border-radius: 10px;
     text-transform: uppercase;
+    transition: background-color 500ms ease;
+}
+
+.register-form-buttons button:hover {
+    background-color: #0022AA;
 }
 
 .login-form {
@@ -402,7 +434,12 @@ img {
     color: white;
     border: none;
     border-radius: 10px;
+    transition: background-color 500ms ease;
     text-transform: uppercase;
+}
+
+.login-form-submit:hover {
+    background-color: #0022AA;
 }
 
 /* footer */
@@ -410,11 +447,42 @@ img {
 .footer {
     text-align: center;
     background-color: white;
-    padding: 50px;
+    padding: 50px 0 20px 0;
 }
 
-.footer i {
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+@media(min-width: 768px){
+    .footer-content {
+        flex-direction: row;
+        gap: unset;
+    }
+}
+
+.footer-content p {
+    max-width: 350px;
+    margin-top: 10px;
+}
+
+.footer-content i {
     font-size: 2em;
     color: var(--celeste);
     margin-bottom: 10px;
+    transition: color 500ms ease;
+}
+
+.footer-content i:hover {
+    color: orangered;
+}
+
+.copyright {
+    margin-top: 50px;
 }
