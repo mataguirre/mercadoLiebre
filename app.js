@@ -1,13 +1,14 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3001;
 
 let publicFolder = path.resolve(__dirname, './public');
 
 app.use(express.static(publicFolder));
 
-app.listen(5500, () => {
-    console.log('Initializing server');
+app.listen(port, () => {
+    console.log(`Initializing server on port ${port}`);
 })
 
 app.get('/', (req, res) => {

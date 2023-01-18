@@ -311,6 +311,11 @@ img {
 
     .last-visit-input,
     .offers-input {
+        transition: box-shadow 450ms ease;
+    }
+
+    .last-visit-input:hover,
+    .offers-input:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
