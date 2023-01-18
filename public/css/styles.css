@@ -30,6 +30,7 @@ html {
 body {
     font-size: 16px;
     font-family: var(--primary-font);
+    background-color: var(--gris-claro);
 }
 
 /* globales */
@@ -143,7 +144,7 @@ img {
     }
 
     .offers-nav-li i,
-    .user-nav-li i{
+    .user-nav-li i {
         margin-left: 10px;
     }
 }
@@ -168,7 +169,6 @@ img {
 /* main-content */
 
 .main {
-    background-color: var(--gris-claro);
     padding-bottom: 50px;
 }
 
@@ -251,7 +251,12 @@ img {
     color: var(--gris-oscuro);
 }
 
+.banner {
+    display: none;
+}
+
 @media(min-width: 768px) {
+
     .offers-title,
     .last-visit-title {
         text-align: justify;
@@ -300,12 +305,112 @@ img {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 20px;
     }
+
+    .banner {
+        display: block;
+    }
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+}
+
+.register-title {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* register-form */
+
+.register-form {
+    width: min(600px, 100%);
+    margin: 0 auto;
+}
+
+.register-form input {
+    margin-bottom: 20px;
+}
+
+.register-form legend {
+    margin: 20px 0;
+}
+
+.register-form-fields {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+}
+
+.register-description {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 12px;
+}
+
+.register-form-buttons {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.register-form-buttons button {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    background-color: var(--celeste);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.login-form {
+    margin: 0 auto;
+    width: min(600px, 100%);
+}
+
+.login-form-input input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.login-title {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.login-form-submit {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    background-color: var(--celeste);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
 }
 
 /* footer */
 
 .footer {
     text-align: center;
+    background-color: white;
+    padding: 50px;
 }
 
 .footer i {
