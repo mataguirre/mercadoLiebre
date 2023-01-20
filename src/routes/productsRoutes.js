@@ -16,7 +16,11 @@ router.get('/:productID', (req, res) => {
 router.get('/:productID/comentarios/:comentariosID?', (req, res) => {
     let productos_id = req.params.productID;
     let comentarios_id = req.params.comentariosID;
-    res.send('Producto n° ' + productos_id + ' comentario n° ' + comentarios_id);
+    if(comentarios_id == undefined){
+        res.send('Producto n° ' + productos_id); 
+    } else {
+        res.send('Producto n° ' + productos_id + ', comentario n° ' + comentarios_id);
+    } 
 })
 
 module.exports = router;
