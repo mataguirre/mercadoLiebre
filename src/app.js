@@ -1,12 +1,18 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 //Debemos requerir las rutas creadas en "routes"
-const productsRoutes = require('./routes/productsRoutes');
-const mainRoutes = require('./routes/mainRoutes');
+const mainController = require('./controllers/mainController');
 let publicFolder = path.resolve(__dirname, '../public');
 
+//Inicializamos el servidor en el puerto indicado
+app.listen(port, () => {
+    console.log(`Initializing server on port ${port}`);
+})
+
+//Seteamos ejs como motor de vistas dinámicas
+app.set('view engine', 'ejs');
 app.use(express.static(publicFolder));
 
 /*
@@ -16,17 +22,6 @@ app.use(express.static(publicFolder));
     necesitemos.
 */
 
-app.use('/productos', productsRoutes);
-app.use('/', mainRoutes);
-
-app.listen(port, () => {
-    console.log(`Initializing server on port ${port}`);
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/pages/register.html'));
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/pages/login.html'));
-})
+app.use('/productos', mainController.products);
+app.use('/', mainController.index);
+app.use('/home', mainController.index);
