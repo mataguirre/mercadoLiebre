@@ -13,6 +13,7 @@ app.listen(port, () => {
 
 //Seteamos ejs como motor de vistas dinámicas
 app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, './views'));
 app.use(express.static(publicFolder));
 
 /*

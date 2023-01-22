@@ -1,19 +1,14 @@
-const express = require('express');
-const path = require('path');
-
-const mainController = {
+module.exports = {
     index: (req, res) => {
-        return res.render(path.resolve(__dirname, '../views/index'));
+        res.render('index');
     },
     login: (req, res) => {
-        return res.render(path.resolve(__dirname, '../views/pages/login'));
+        res.render('pages/login');
     },
     register: (req, res) => {
-        return res.render(path.resolve(__dirname, '../views/pages/register'));
+        res.render('pages/register');
     },
     products: (req, res) => {
-        return res.render(path.resolve(__dirname, '../views/pages/products'));
+        res.render('pages/products');
     }
 }
-
-module.exports = mainController;
