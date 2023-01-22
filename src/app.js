@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 //Debemos requerir las rutas creadas en "routes"
-const mainController = require('./controllers/mainController');
 let publicFolder = path.resolve(__dirname, '../public');
 
 //Inicializamos el servidor en el puerto indicado
@@ -22,6 +21,4 @@ app.use(express.static(publicFolder));
     necesitemos.
 */
 
-app.use('/productos', mainController.products);
-app.use('/', mainController.index);
-app.use('/home', mainController.index);
+app.use('/', mainRoutes);

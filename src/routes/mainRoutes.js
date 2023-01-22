@@ -1,13 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
+const mainController = require('../controllers/mainController');
 
-router.get('/', (req, res) => {
-    res.render(path.resolve(__dirname, '../views/index'));
-})
-
-router.get('/home', (req, res) => {
-    res.render(path.resolve(__dirname, '../views/index'));
-})
+router.use('/', mainController.index);
+router.use('/home', mainController.index);
+router.use('/login', mainController.login);
+router.use('/register', mainController.register);
 
 module.exports = router;

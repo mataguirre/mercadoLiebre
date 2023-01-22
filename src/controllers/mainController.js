@@ -1,22 +1,18 @@
 const express = require('express');
-const router = express.Router();
-const productsRoutes = require('../routes/productsRoutes');
-const mainRoutes = require('../routes/mainRoutes');
-const loginRoutes = require('../routes/loginRoutes');
-const registerRoutes = require('../routes/registerRoutes');
+const path = require('path');
 
 const mainController = {
     index: (req, res) => {
-        return res.use('/', mainRoutes);
+        return res.render(path.resolve(__dirname, '../views/index'));
     },
     login: (req, res) => {
-        return res.use('/login', loginRoutes);
+        return res.render(path.resolve(__dirname, '../views/pages/login'));
     },
     register: (req, res) => {
-        return res.use('/register', registerRoutes);
+        return res.render(path.resolve(__dirname, '../views/pages/register'));
     },
     products: (req, res) => {
-        return res.use('/products', productsRoutes);
+        return res.render(path.resolve(__dirname, '../views/pages/products'));
     }
 }
 
